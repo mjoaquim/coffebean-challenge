@@ -87,7 +87,7 @@
 			$('#number').removeClass('valid').addClass('invalid');
         }
 		//validate 2 especiais
-		if ( pswd.match(/[^a-zA-Z0-9\-\/]{2}/)) {
+		if ( pswd.match(/[ !"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]{2}/)) {
 			$('#space').removeClass('invalid').addClass('valid');
 		} else {
 			$('#space').removeClass('valid').addClass('invalid');
