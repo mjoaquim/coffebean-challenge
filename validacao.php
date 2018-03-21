@@ -11,7 +11,7 @@ if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
 }
 
 //Verificao da senha
-if($sizeSenha < 10 || $sizeSenha > 126){
+if($sizeSenha < 10 || $sizeSenha > 128){
     $vSenha=1;
 }
 if(!preg_match('/[0-9]{2}/', $senha)){

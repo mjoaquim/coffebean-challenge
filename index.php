@@ -63,7 +63,7 @@
         // valida tamanho
 		if ( pswd.length <= 10 ) {
 			$('#length').removeClass('valid').addClass('invalid');
-		} else if( pswd.length > 120 )  {
+		} else if( pswd.length > 128 )  {
 			$('#length').removeClass('valid').addClass('invalid');
         } else {
             $('#length').removeClass('invalid').addClass('valid');
