@@ -11,21 +11,29 @@ if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
 }
 
 //Verificao da senha
+//Tamanho
 if($sizeSenha < 10 || $sizeSenha > 128){
     $vSenha=1;
 }
+// Digitos
 if(!preg_match('/[0-9]{2}/', $senha)){
     $vSenha=1;
  }
+ // Maisculas
  if(!preg_match('/[A-Z]{2}/', $senha)){
     $vSenha=1;
  }
+ //Minusculas
  if(!preg_match('/[A-z]{2}/', $senha)){
     $vSenha=1;
  }
- if(!preg_match('/[^a-zA-Z0-9\-\/]{2}/', $senha)){
+ //Especiais
+if(!preg_match('/[\'\/~`\!@#\$%\^&\*\(\)_\-\+=\{\}\[\]\|;:"\<\>,\.\?\\\]{2}/', $senha)){
     $vSenha=1;
  }
+
+
+ 
 
 if(!isset($vMail)):
     echo 'Retorne e valide o campo e-mail.<br>';
